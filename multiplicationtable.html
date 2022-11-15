@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    Enter the number
+    <input type="number" id="num"  placeholder="num" >  
+    <input type="button " value ="using for loop" onclick="useFor()">
+    <input type="button " value ="using while loop" onclick="useWhile()">
+    <input type="button " value ="using dowhile loop" onclick="usedowhile()">  
+</body>
+<script>
+    function useFor(){
+        var num=document.getElementById("num").value;
+        document.write("Table of "+num+"using for loop"+"<br>");
+        for(var i=1;i<=10;i++){
+            var x = num*i;
+            document.write(num+ "X"+ i +"=" +x +"<br>");
+        }
+    }
+    function useWhile(){
+        var num=document.getElementById("num").value;
+        document.write("Table of "+num+"using while loop"+"<br>"); 
+        var i=1;
+        while(i<=10){
+            var x=num*i;
+            
+            document.write(num+ "X"+ i +"=" +x +"<br>");
+            i++;
+        }
+    }
+    function usedowhile(){
+        var num=document.getElementById("num").value;
+        document.write("Table of "+num+"using while loop"+"<br>"); 
+        var i =1
+        do{
+            var x= num*i;
+            document.write(num+ "X"+ i +"=" +x +"<br>");
+            i++;
+        }
+        while(i<=10)}
+</script>
+</html>

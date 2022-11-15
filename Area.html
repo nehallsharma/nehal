@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Area</title>
+</head>
+<body>
+    <h1>Area of cicle</h1>
+    <input type="number" placeholder="Enter the radius" id="r">
+    <input type="button" value="Area of circle" onclick="circle()">
+    <h1>Area of rectangle</h1>
+    <input type="number" id="l" placeholder="Enter the length">
+    <input type="number" id="b" placeholder ="Enter the breadth">
+    <input type="button" value ="calculate area of rectangle" onclick="rect()">
+    <h1>Rea of Tranlge</h1>
+    <input type ="number" id="base" placeholder="enter base">
+    <input type ="number" id="h" placeholder="enter height">
+    <input type ="button" value ="area of trianle" onclick="triangle()">
+    
+</body>
+
+<script>
+     
+    function circle(){
+        var r=document.getElementById("r").value;
+        var area=Math.PI*r*r;
+        window.alert("area of circle is:"+area);
+    }
+    function rect(){
+        var l =document.getElementById("l").value;
+        var b = document.getElementById("b").value;
+        var a= l*b;
+        document.write("Are of rectanle is"+a);
+    }
+    function triangle(){
+        let b =document.getElementById("base").value;
+        let h =prompt("Enter the height");
+        let area= 1/2*b*h;
+        alert("Area is triangle is"+area)
+    }
+</script>
+</html>

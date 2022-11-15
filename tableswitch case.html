@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Table</title>
+</head>
+<input type="number" id="num" placeholder ="Enter number"><br>
+ENTER 1 TO USE FOR LOOP<br>
+ENTER 2 TO USE WHILE LOOP<br>
+ENTER 3 TO USE DO WHILE LOOP<br>
+<input type="number" id="choice" ><br>
+<input type="button" value="Calculate Table" onclick="table()"><br>
+
+<body>
+    <div id="out"></div>
+    <script>
+        function table(){
+            var num=document.getElementById("num").value;
+            
+            var ch=parseInt(document.getElementById("choice").value);
+            console.log(ch);
+
+            switch(ch)
+            {
+                case 1: 
+                    for(var i =1;i<=10;i++){
+                        var x=num*i;
+                        document.getElementById("out").innerHTML+=num+"X"+i+"="+x+"<br>";
+                    }
+               break;
+               case 2:
+                var i =1  
+                    while(i<=10){
+                        var x=num*i;
+                        document.getElementById("out").innerHTML+=num+"X"+i+"="+x+"<br>";
+                        i++;
+                    }
+               break;
+               case 3:
+                var i =1
+                    do{
+                        var x=num*i;
+                     
+                        document.getElementById("out").innerHTML+=num+"X"+i+"="+x+"<br>";
+                        i++;
+                    }
+                    while(i<10);
+                    break;
+               default:
+               document.getElementById("out").innerHTML+="Incorrect choice";
+            }
+        }
+    </script>
+</body>
+</html>

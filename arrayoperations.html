@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Displaying various method of arrays </title>
+</head>
+<body>
+Enter Elements to create array:
+<input id="Elements" type="text">
+<input type="button" value="Add Elements" onclick="addElements()">
+<br><br>
+After performing Every Operation Please Click here to see result <input
+type="button" value="Display Array" onclick="displayValues()">
+<br><br>
+Choose Operations:
+<input type="button" value="Pop Element" onclick="removeElementAtEnd()">
+<input type="button" value="Shift Element" onclick="removeElementAtFirst()">
+<br><br>
+Enter index number to delete particular element:<input type = "text" id =
+"num1">
+<input type="button" value="Delete Element" onclick="deleteElement()">
+<br><br>
+Enter index numbers from where to where you have to delete element:<input type
+= "text" id = "num">
+<input type = "text" id = "num2">
+<input type="button" value="Slice array" onclick="spliceArray()">
+<br><br>
+Enter any elemet to check whether element present or not :<input type = "text" id
+= "num3">
+<input type="button" value="Check Include" onclick="includeElement()">
+<br><br>
+Enter any elemet to add : <input type = "text" id = "num4">
+<input type="button" value="pushElement" onclick="pushElement()">
+<br><br>
+
+<div id="result"></div>
+
+<script>
+var i=0;
+var arrElements = new Array();       //2 2 5 5 7     //2 5 7
+
+function addElements(){
+arrElements[i] = document.getElementById("Elements").value;
+alert("Element added to the array is : " + arrElements[i]);
+i++;
+document.getElementById("Elements").value = "";
+}
+
+function displayValues()
+{
+document.getElementById('result').innerHTML = "Elements Entered by User : "+arrElements+"</br>";
+}
+
+function removeElementAtEnd()
+{
+var a = arrElements.pop();   //2 2 5 5   
+alert("Removed last element");
+}
+
+function removeElementAtFirst()
+{
+var b = arrElements.shift();     
+alert("Removed first element");    //2 5 5
+}
+
+function deleteElement()
+{
+//var c = delete arrElements[2];
+var c = document.getElementById("num1").value;  //5
+var i=arrElements.indexOf(c);
+var d = delete arrElements[i];     //5
+alert("Deleted particular element");    // 2 5
+}
+
+function spliceArray()
+{
+// var c = delete arrElements[2];
+var e = document.getElementById("num").value;
+var f = document.getElementById("num2").value;
+var g = arrElements.splice(e,f);     //2 5 7 
+alert("Sliced!!");
+}
+
+function includeElement()
+{
+var h = document.getElementById("num3").value;
+var k = arrElements.includes(h);
+{
+if(k){
+alert("true");
+}
+else
+{
+alert("false");
+}
+alert("Checked!!");
+}
+}
+function pushElement()
+{
+var m = document.getElementById("num4").value;
+var n = arrElements.push(m);
+alert("Push operation Performed!!");
+}
+</script>
+</body>
+</html>

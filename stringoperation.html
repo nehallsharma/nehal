@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    Enter a string:
+    <input type="text" id="str"/>
+    <input type="button" id="input" value="REVERSE" onclick="reverse();"/><br>
+    Enter a character to be replaced:
+    <input type="text" id="replace"/>
+    <input type="button" id="input" value="REPLACE" onclick="replace();"/><br>
+    <input type="button" id="input" value="CHECK PALINDROME" onclick="palindrome();"/>
+    <div id="output"></div>
+    <script>
+        function reverse()
+        {
+            let s=document.getElementById("str").value;  //new 
+            let ns="";       //wen   tp store reversed string
+            for(let i=s.length-1;i>=0;i--)
+            {
+                ns=ns+s[i];   //w+e+n  wen
+            }
+            document.getElementById("output").innerHTML+="<b>Reversed string:</b>"+ns+"<br>";
+        }
+        function replace()
+        {
+            var ch=prompt("Enter a character:");
+            let s=document.getElementById("str").value;   //madam
+            let r=document.getElementById("replace").value;  //a
+            let ns="";
+            for(let i=0;i<s.length;i++)
+            {
+                if(s[i]==r)
+                    ns=ns+ch;
+                else
+                    ns=ns+s[i];   //m*d*m
+            }
+            document.getElementById("output").innerHTML+="Replaced string: "+ns+"<br>";
+        }
+        function palindrome()
+        {
+            let s=document.getElementById("str").value;
+            let ns="";
+            for(let i=s.length-1;i>=0;i--)
+            {
+                ns=ns+s[i];
+            }
+            if(ns==s)
+            {
+                document.getElementById("output").innerHTML+="<b>It is a Palindrome String</b>"
+            }
+            else
+            {
+                document.getElementById("output").innerHTML+="<b>It is not a Palindrome String</b>"
+            }
+
+        }
+    </script>
+</body>
+</html>
