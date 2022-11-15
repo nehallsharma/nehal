@@ -15,17 +15,14 @@ Choose Operations:
 <input type="button" value="Pop Element" onclick="removeElementAtEnd()">
 <input type="button" value="Shift Element" onclick="removeElementAtFirst()">
 <br><br>
-Enter index number to delete particular element:<input type = "text" id =
-"num1">
+Enter index number to delete particular element:<input type = "text" id ="num1">
 <input type="button" value="Delete Element" onclick="deleteElement()">
 <br><br>
-Enter index numbers from where to where you have to delete element:<input type
-= "text" id = "num">
+Enter index numbers from where to where you have to delete element:<input type = "text" id = "num">
 <input type = "text" id = "num2">
 <input type="button" value="Slice array" onclick="spliceArray()">
 <br><br>
-Enter any elemet to check whether element present or not :<input type = "text" id
-= "num3">
+Enter any element to check whether element present or not :<input type = "text" id = "num3">
 <input type="button" value="Check Include" onclick="includeElement()">
 <br><br>
 Enter any elemet to add : <input type = "text" id = "num4">
@@ -37,8 +34,8 @@ Enter any elemet to add : <input type = "text" id = "num4">
 <script>
 var i=0;
 var arrElements = new Array();       //2 2 5 5 7     //2 5 7
-
-function addElements(){
+function addElements()
+{
 arrElements[i] = document.getElementById("Elements").value;
 alert("Element added to the array is : " + arrElements[i]);
 i++;
@@ -82,18 +79,17 @@ alert("Sliced!!");
 
 function includeElement()
 {
-var h = document.getElementById("num3").value;
-var k = arrElements.includes(h);
-{
-if(k){
-alert("true");
-}
-else
-{
-alert("false");
-}
-alert("Checked!!");
-}
+    var h = document.getElementById("num3").value;
+    var k = arrElements.includes(h);
+    if(k)
+    {
+        alert("true");
+    }
+    else
+    {
+        alert("false");
+    }
+    alert("Checked!!");
 }
 function pushElement()
 {
