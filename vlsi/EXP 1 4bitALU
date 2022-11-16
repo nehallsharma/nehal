@@ -1,14 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_unsigned.ALL;
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity alu4bit is
     Port ( n1,n2 : in STD_LOGIC_VECTOR (3 downto 0);
@@ -26,10 +18,10 @@ begin
 flag<='0';
 case op is
 when "000"=>
-temp:= ('0' & n1) + n2; --when op =000 then perform addition
+temp:= ('0' & n1) + n2; 
 res<= temp(3 downto 0);
 flag<= temp(4);
-when "001"=>  ---Subtraction
+when "001"=>  
 if(n1> n2)then
 res<= n1- n2;
 else
