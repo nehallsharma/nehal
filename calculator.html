@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- <style>
+        h1 {
+            align-items: center;
+            text-align: center;
+        }
+        
+        .buttons {
+            text-align: center;
+            align-items: center;
+        }
+        
+        input {
+            text-align: end;
+        }
+    </style> -->
+</head>
+
+<body>
+    <table>
+        <h1>Online Calculator</h1>
+
+
+        <input type="text" name="inputtext" id="inputtext" placeholder="0">
+        <br>
+        <br>
+        <div class="buttons">
+
+            <div class="row">
+                <input class="btn" type="button" onclick="clr()" id="b" value="C">
+                <input class="btn" type="button" onclick="del()" id="b" value="Del">
+                <br>
+                <br>
+                <input class="btn" type="button" onclick="cal(7)" id="b" value="7">
+                <input class="btn" type="button" onclick="cal(8)" id="b" value="8">
+                <input class="btn" type="button" onclick="cal(9)" id="b" value="9">
+                <input class="btn" type="button" onclick="cal('+')" id="plus" value="+">
+                <br>
+                <br>
+            </div>
+            <div class="row">
+                <input class="btn" type="button" onclick='cal(4)' id="b" value="4">
+                <input class="btn" type="button" onclick='cal(5)' id="b" value="5">
+                <input class="btn" type="button" onclick='cal(6)' id="b" value="6">
+                <input class="btn" type="button" onclick='cal("-")' id="minus" value="-">
+                <br>
+                <br>
+            </div>
+            <div class="row">
+                <input class="btn" type="button" onclick='cal(1)' id="b" value="1">
+                <input class="btn" type="button" onclick='cal(2)' id="b" value="2">
+                <input class="btn" type="button" onclick='cal(3)' id="b" value="3">
+                <input class="btn" type="button" onclick='cal("*")' id="mul" value="*">
+                <br>
+                <br>
+            </div>
+            <div class="row">
+                <input class="btn" type="button" onclick='cal(0)' id="b" value="0">
+                <input class="btn" type="button" onclick='cal(".")' id="b" value=".">
+                <input class="btn" type="button" onclick='cal("/")' id="divv" value="/">
+                <input class="blue" type="button" value="=" onclick="Result()">
+            </div>
+        </div>
+    </table>
+    <br/>
+
+
+
+    <script type="text/javascript">
+        let result = document.getElementById("inputtext");
+
+        function cal(number) {
+            result.value = result.value + number;
+        }
+
+        function Result() {
+            try {
+                result.value = eval(result.value);
+            } catch (err) {
+                alert("Enter The Valid Input")
+
+            }
+        }
+
+        let clr = () => {
+            result.value = ""
+        }
+
+        let del = () => {
+            result.value = result.value.slice(0, -1);
+        }
+    </script>
+
+</body>
+
+</html>
